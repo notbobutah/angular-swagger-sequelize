@@ -1,0 +1,58 @@
+body {
+	background: url("https://dummyimage.com/100x100/211e21/828227&text=flip-cards") 0 0;
+}
+
+.flip3D{ width:180px; height:220px; margin:10px; }
+.flip3D > .front{
+	position: relative;
+	-webkit-transform: perspective( 600px ) rotateY( 0deg );
+	transform: perspective( 600px ) rotateY( 0deg );
+	background:#FC0; width:180px; height:220px; border-radius: 7px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transition: -webkit-transform .5s linear 0s;
+	transition: transform .5s linear 0s;
+}
+.flip3D > .back{
+	position: absolute;
+	-webkit-transform: perspective( 600px ) rotateY( 180deg );
+	transform: perspective( 600px ) rotateY( 180deg );
+	background: #80BFFF; width:180px; height:220px; border-radius: 7px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	text-align:center; /* center horizontally */
+  vertical-align:middle; /* center vertically */
+	transition: -webkit-transform .5s linear 0s;
+	transition: transform .5s linear 0s;
+}
+.flip3D:hover > .front{
+	-webkit-transform: perspective( 600px ) rotateY( -180deg );
+	transform: perspective( 600px ) rotateY( -180deg );
+}
+.flip3D:hover > .back{
+	-webkit-transform: perspective( 600px ) rotateY( 0deg );
+	transform: perspective( 600px ) rotateY( 0deg );
+}
+.btn {
+    outline: 1px red;
+}
+.warm-card,
+.warm-card>.panel-heading {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.warm-card,
+.warm-card>.panel-heading:hover {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925;
+}
+
+.warm-card {
+    padding: 0;
+}
