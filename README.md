@@ -1,4 +1,4 @@
-# Corevaluesapp
+# DemoCardApp 
 
 ## Global setup
 This project requires several globally installed tools as listed below:  
